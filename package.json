@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Sensoan IAQ REST API",
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },  
   "author": "Petri Konkka",
   "license": "ISC",
   "dependencies": {
