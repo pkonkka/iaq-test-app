@@ -1,0 +1,98 @@
+
+.navbar-brand {
+    font-size: 1.8em; 
+}
+.navbar-left {
+    margin-right: 15px;
+}
+
+.navbar-text > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar-default  {
+    background-color: #195AB6;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #FD6901;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > .active  > a,
+.navbar-default .navbar-nav > .active  > a:hover,
+.navbar-default .navbar-nav > .active  > a:focus {
+    color: #FFFFFF;
+    background-color: #195AB6;
+}
+            
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #FD6901;
+    background-color: transparent;
+}
+            
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    background-color: #0A2D4E;
+    color: #FFFFFF;
+}
+
+.btn-primary {
+    background-color: #195AB6;
+    border-color: #195AB6;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.open .dropdown-toggle.btn-primary {
+    color: #FFFFFF;
+    background-color: #0A2D4E;
+    border-color: #0A2D4E;
+}
+
+.btn-success {
+    background-color: #FD6901;
+    border-color: #FD6901;
+    color: #FFFFFF;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-suceess:active,
+.open .dropdown-toggle.btn-success {
+    color: #FFFFFF;
+    background-color: #0A2D4E;
+    border-color: #0A2D4E;
+}
+
+.btn btn-default {
+    color: #FFFFFF;
+    background-color: #FD6901    
+}
+
+input.ng-invalid {
+    border-color: pink;
+}
+input.ng-valid {
+    border-color: lightgreen;
+}
+
+.alert {
+    margin-top: 10px;
+}

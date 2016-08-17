@@ -1,0 +1,32 @@
+<form ng-submit="submit()">
+
+  <div class="form-group">
+    <label for="sensorGroupName">Sensor Group</label>
+    <select class="form-control" ng-model="sensorGroupName" >
+      <option ng-repeat="option in options" value="{{ option }}">{{ option }}</option> 
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="deviceID">Sensor ID</label>
+    <input type="text" class="form-control" ng-model="sensorID" placeholder="Sensor ID" required/>
+  </div>
+
+  <div class="form-group">
+    <label for="location">Location</label>
+    <input type="text" class="form-control" ng-model="location" />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" ng-model="description" />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save</button>  
+  <button type="button" ng-click="deleteSensor()" class="btn btn-danger">Delete</button>
+  <button type="button" ng-click="cancelEdit()" class="btn btn-default">Cancel</button>
+
+
+</form>
+
+<error-message></error-message>

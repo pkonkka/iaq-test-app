@@ -1,0 +1,26 @@
+<h2>Measurements</h2>
+<table style="width:100%" class="table table-responsive table-striped tabled-condensed table-hover table-bordered sensortable">
+  <tr>
+    <th>#</th>  
+    <th>Sensor ID</th>
+    <th>Timestamp</th>
+    <th>Current Value</th> 
+    <th>Unit</th>
+    <th>Data Type</th>    
+    <th>Action</th>
+  </tr>
+
+ <tr ng-repeat="w in measurements">
+    <td>{{ $index + 1 }}</td>      
+    <td>{{ w.sensorID }}</td>
+    <td>{{ w.timestamp | date: 'dd/MM/yy HH:mm:ss' }}</td> 
+    <td>{{ w.currentValue }}</td>
+    <td>{{ w.unit }}</td>
+    <td>{{ w.dataType }}</td>
+
+    <td><a class="btn btn-primary" href='#/measurements/{{ w.sensorID }}/view'>View Sensor</a></td>
+    
+  </tr>
+</table>
+
+<error-message></error-message>

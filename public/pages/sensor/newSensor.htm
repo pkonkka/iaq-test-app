@@ -1,0 +1,34 @@
+
+<form name="newSensorForm" ng-submit="submit()">
+
+  <div class="form-group">
+    <label for="sensorGroupName">Sensor Group</label>
+    <select class="form-control" ng-model="sensorGroupName" name="sensorGroupName" required>
+      <option value="">Please select a group...</option>
+      <option ng-repeat="option in options" value="{{ option }}">{{ option }}</option> 
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="deviceID">Sensor ID</label>
+    <input type="text" class="form-control" name="sensorID" ng-model="sensorID" placeholder="Sensor ID" required/>
+  </div>
+
+  <div class="form-group">
+    <label for="location">Location</label>
+    <input type="text" class="form-control" ng-model="location" />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" ng-model="description" />
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="button" ng-click="cancelNewSensor()" class="btn btn-default">Cancel</button>
+  <button type="button" ng-click="GetUUID()" class="btn btn-default">Generate Unique Sensor ID</button>
+
+
+</form>
+
+<error-message></error-message>

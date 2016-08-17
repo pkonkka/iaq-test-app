@@ -1,0 +1,49 @@
+<h2>Sensors</h2>
+
+<form>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+      <input type="text" class="form-control" placeholder="search..." ng-model="searchValue" />
+
+    </div>
+  </div>
+</form>
+
+<table style="width:100%" class="table table-responsive table-striped tabled-condensed table-hover table-bordered sensortable">
+  <thead>
+  <tr>
+    <th>#</th>    
+    <th>Sensor ID</th>
+    <th>
+      <a href="#/" ng-click="sortType = 'latestUpdate'; sortReverse = !sortReverse">
+      Latest Update
+      <span ng-show="sortType == 'latestUpdate' && !sortReverse" class="fa fa-caret-down"></span>
+      <span ng-show="sortType == 'latestUpdate' && sortReverse" class="fa fa-caret-up"></span>                                                                                          
+      </a>
+    </th>
+    <th>Value</th>
+    <th>Location</th> 
+    <th>Description</th>
+    <th>Group</th>    
+    <th>Action</th>
+  </tr>
+  </thead>
+
+ <tr ng-repeat="w in sensors | orderBy:sortType:sortReverse | filter:searchValue">
+    <td>{{ $index + 1 }}</td>   
+    <td>{{ w.sensorID }}</td>
+    <td>{{ w.latestUpdate | date: 'dd/MM/yy HH:mm:ss' }}</td>
+    <td>{{ w.latestValue }}</td>
+    <td>{{ w.location }}</td> 
+    <td>{{ w.description }}</td>
+    <td>{{ w.sensorGroupName }}</td>
+
+    <td><a class="btn btn-primary" href='#/sensors/{{ w.sensorID }}/view'>View</a>
+    <a class="btn btn-primary" href='#/sensors/{{ w.sensorID }}/edit'>Edit</a></td>
+
+  </tr>
+</table>
+
+<error-message></error-message>

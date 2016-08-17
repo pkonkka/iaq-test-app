@@ -1,0 +1,29 @@
+
+
+<h2>Sensor Groups</h2>
+<table style="width:100%" class="table table-responsive table-striped tabled-condensed table-hover table-bordered grouptable">
+  <tr>
+    <th>#</th>
+    <th>Group Name</th>
+    <th>Description</th> 
+    <th>Parent Group</th>
+    <th>Action</th>
+  </tr>
+
+ <tr ng-repeat="w in groups">
+    <!-- <group-report group-info="w"></group-report> -->
+    <td>{{ $index + 1 }}</td>   
+    <td>{{ w.groupName }}</td>
+    <td>{{ w.description }}</td> 
+    <td>{{ w.parentGroupName }}</td>
+
+    <td><a class="btn btn-primary" href='#/groups/{{ w._id }}/view'>View</a>
+    <a class="btn btn-primary" href='#/groups/{{ w._id }}/edit'>Edit</a></td>
+
+  </tr>
+</table>
+
+<a class="btn btn-primary" href='#/groups/new'>Add new group</a>
+
+<error-message></error-message>
+
