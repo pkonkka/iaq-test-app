@@ -1,4 +1,4 @@
-# Sensoan iaq-rest-api
+# iaq-rest-api / iaq-test-app
 
 ## Introduction
 
